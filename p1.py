@@ -56,19 +56,18 @@ model=Pipeline(
 model.fit(X_train,y_train)
 y_pred=model.predict(X_test)
 y_prob=model.predict_proba(X_test)[:,1]
-print("Predicted Values\n",y_pred)
 
 #Evaluation 
 
 accuracy=accuracy_score(y_test,y_pred)
 cm=confusion_matrix(y_test,y_pred)
-classification_report=classification_report(y_test,y_pred)
-roc=roc_auc_score(y_test,y_prob)
+report=classification_report(y_test,y_pred)
+roc_auc=roc_auc_score(y_test,y_prob)
 
 print("\nAccuracy Score\n",accuracy)
 print("\nConfusion Matrix\n",cm)
-print("Classification report:\n",classification_report)
-print("ROC(Receiver Operating Characteristic):\n",roc)
+print("Classification report:\n",report)
+print("ROC(Receiver Operating Characteristic):\n",roc_auc)
 
 #ROC Curve
 
