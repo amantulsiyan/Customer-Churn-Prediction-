@@ -70,6 +70,8 @@ print("\nConfusion Matrix\n",cm)
 print("Classification report:\n",classification_report)
 print("ROC(Receiver Operating Characteristic):\n",roc)
 
+#ROC Curve
+
 fpr, tpr, _=roc_curve(y_test,y_prob)
 plt.plot(fpr,tpr)
 plt.plot([0,1],[0,1],linestyle="--")
