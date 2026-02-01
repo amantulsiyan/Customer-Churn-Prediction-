@@ -1,4 +1,3 @@
-
 #Imports
 
 import pandas as pd 
@@ -78,7 +77,4 @@ plt.xlabel("False Positive Rate")
 plt.ylabel("True Positive Rate")
 plt.title("ROC Curve")
 plt.show()
-
-
-
 
